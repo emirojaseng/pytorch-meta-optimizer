@@ -124,8 +124,8 @@ def main():
 
             # Compute relative decrease in the loss function w.r.t initial
             # value
-            decrease_in_loss += loss.data[0] / initial_loss.data[0]
-            final_loss += loss.data[0]
+            decrease_in_loss += loss.data / initial_loss.data
+            final_loss += loss.data
 
         print("Epoch: {}, final loss {}, average final/initial loss ratio: {}".format(epoch, final_loss / args.updates_per_epoch,
                                                                        decrease_in_loss / args.updates_per_epoch))
