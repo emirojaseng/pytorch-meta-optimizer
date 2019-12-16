@@ -60,7 +60,7 @@ def main():
     if args.cuda:
         meta_optimizer.cuda()
 
-    optimizer = optim.Adam(meta_optimizer.parameters(), lr=1e-3)
+    optimizer = optim.Adam(meta_optimizer.parameters(), lr=3e-3)
 
     for epoch in range(args.max_epoch):
         decrease_in_loss = 0.0
